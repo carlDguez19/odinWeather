@@ -7,6 +7,7 @@ module.exports = {
   devtool: 'inline-source-map',
   devServer: {
     static: './dist',
+    watchFiles: ['./src/*','./src/index.html']
   },
   plugins: [
     new HtmlWebpackPlugin({
@@ -17,6 +18,7 @@ module.exports = {
   ],
   output: {
     filename: '[name].bundle.js',
+    // eslint-disable-next-line no-undef
     path: path.resolve(__dirname, 'dist'),
     clean: true,
   },
